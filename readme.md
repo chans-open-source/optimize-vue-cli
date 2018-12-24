@@ -1,4 +1,4 @@
-#optimize-vue-cli
+# optimize-vue-cli
 
 ![NPM version](https://img.shields.io/npm/v/optimize-vue-cli.svg)
 ![NPM download](https://img.shields.io/npm/dm/optimize-vue-cli.svg)
@@ -15,18 +15,18 @@
 ## Template
 [Source Code](https://github.com/ChangedenCZD/optimize-vue)
 
-##Install
+## Install
 ```commandline
 npm i -g optimize-vue-cli
 ```
 
-##Create Project
+## Create Project
 ```text
 vues create <project-name>
 // eg: vues create demo
 ```
 
-##Init Project
+## Init Project
 ```text
 // Install vue-cli-3.0 at first.
 npm install -g @vue/cli
@@ -38,8 +38,8 @@ cd <project-name>
 yarn install 
 ```
 
-##Add Module
-####Remark: Used in the project root directory.
+## Add Module
+#### Remark: Used in the project root directory.
 ```text
 vues add -m <module-title> -p <module-path>
 // eg: vues add -m module1 -p /mobile/page/index
@@ -47,8 +47,8 @@ vues add -m <module-title> -p <module-path>
 // Html-Url: localhost:port/mobile/page/index
 ```
 
-##Add Component
-####Remark: Used in the project root directory.
+## Add Component
+#### Remark: Used in the project root directory.
 ```text
 vues add -c <component-path>
 // eg: vues add -c /home/index

@@ -1,6 +1,6 @@
 {
   "name": "optimize-vue-cli",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "基于 vue-cli 3.0 构建的快速开发框架的脚手架",
   "author": {
     "name": "changeden"
@@ -27,5 +27,13 @@
   },
   "engines": {
     "node": ">=8.9"
+  },
+  "bugs": {
+    "url": "https://github.com/ChangedenCZD/optimize-vue-cli/issues"
+  },
+  "homepage": "https://github.com/ChangedenCZD/optimize-vue-cli#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChangedenCZD/optimize-vue-cli.git"
   }
 }
