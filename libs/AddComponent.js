@@ -10,7 +10,7 @@ function add (cwx, component, componentDir, srcDir) {
   const indexFilePath = `${dir}index.js`;
   if (!FileUtils.isExist(indexFilePath)) {
     FileUtils.mkdir(dir);
-    FileGenerator.component.gen(dir, className, srcDir, fixPath);
+    FileGenerator.component.gen(dir, className, srcDir);
     console.log(chalk.yellow(`Component:${component} gen success`));
   } else {
     console.log(chalk.white(`Component:${component} is exists`));

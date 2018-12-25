@@ -53,7 +53,7 @@ const genModuleVueFile = (dir, className) => {
   FileUtils.write(`${dir}module.vue`, `<template><section class="module-layout ${className}"></section></template>
 
 <script>module.exports = require('./module.js');</script>
-<style lang="scss" scoped="true">@import "${scssFile}";</style>
+<style lang="scss">@import "${scssFile}";</style>
 `);
 };
 
@@ -83,7 +83,7 @@ const genComponentScssFile = (dir, className, srcDir) => {
 .component-layout.${className} {}`);
 };
 
-const genComponentFiles = (dir, className, srcDir, fixPath) => {
+const genComponentFiles = (dir, className, srcDir) => {
   genIndexFile(dir);
   genComponentVueFile(dir, className);
   genComponentScssFile(dir, className, srcDir);
