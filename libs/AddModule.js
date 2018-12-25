@@ -7,7 +7,7 @@ function add (cwd, title, path, moduleDir, srcDir) {
   const fixPath = TextUtils.fixPath(path);
   const className = TextUtils.parseClassName(fixPath);
   const dir = `${moduleDir}${fixPath}/`;
-  const configFilePath = `${dir}module.config.json`;
+  const configFilePath = `${dir}module.config.js`;
   if (!FileUtils.isExist(configFilePath)) { // 创建模块
     FileUtils.mkdir(dir);
     FileGenerator.module.gen(dir, className, fixPath, title, srcDir);

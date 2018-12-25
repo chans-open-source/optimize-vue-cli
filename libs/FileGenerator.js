@@ -4,7 +4,7 @@ const SRC = '/src/';
 const ASSETS_SCSS_BASE = 'assets/scss/base';
 
 const genConfigFile = (configFilePath, fixPath, moduleTitle) => {
-  FileUtils.write(configFilePath, `{"path": "/${fixPath}","title": "${moduleTitle}"}`);
+  FileUtils.write(configFilePath, `module.exports = {path: '/${fixPath}',title: '${moduleTitle}'};`);
 };
 
 const genJsFile = (dir, className, isComponent = false) => {
