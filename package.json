@@ -1,6 +1,6 @@
 {
   "name": "optimize-vue-cli",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "基于 vue-cli 3.0 构建的快速开发框架的脚手架",
   "author": {
     "name": "changeden"
@@ -17,6 +17,9 @@
     "log-symbols": "^2.2.0",
     "ora": "^3.0.0",
     "shelljs": "^0.8.3"
+  },
+  "devDependencies": {
+    "eslint": "^5.11.0"
   },
   "keywords": [
     "vue",
