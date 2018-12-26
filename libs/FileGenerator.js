@@ -58,7 +58,7 @@ const genModuleVueFile = (dir, className) => {
 };
 
 const genModuleFiles = (dir, className, fixPath, title, srcDir) => {
-  const configFilePath = `${dir}module.config.json`;
+  const configFilePath = `${dir}module.config.js`;
   genConfigFile(configFilePath, fixPath, title);
   genScssFile(dir, className, srcDir);
   genModuleVueFile(dir, className);
