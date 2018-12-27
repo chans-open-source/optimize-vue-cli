@@ -52,7 +52,7 @@ const genModuleVueFile = (dir, className) => {
   const scssFile = './module.scss';
   FileUtils.write(`${dir}module.vue`, `<template><section class="module-layout ${className}"></section></template>
 
-<script>module.exports = require('./module.js');</script>
+<script>import m from './module.js';export default m;</script>
 <style lang="scss">@import "${scssFile}";</style>
 `);
 };
