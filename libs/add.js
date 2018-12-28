@@ -33,7 +33,7 @@ function add (cwx, config) {
 }
 
 function addModule (cwx, moduleTitle, modulePath, srcDir) {
-  if (path) {
+  if (modulePath) {
     require('./AddModule')(cwx, moduleTitle, modulePath, FileUtils.absolutePath(srcDir, 'modules'), srcDir);
   } else {
     console.log(chalk.yellow('Please append -p option.'));
