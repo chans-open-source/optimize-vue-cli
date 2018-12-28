@@ -54,6 +54,23 @@ vues add -c <component-path>
 // eg: vues add -c /home/index
 ```
 
+## Add multiple modules at a time
+#### Remark: Used in the project root directory.
+```text
+vues add -a -m <module-path-array>
+// eg: vues add -a -m /page/a,/page/b
+// Html-Title: Page Title
+// Html-Url-0: localhost:port/page/a
+// Html-Url-1: localhost:port/page/b
+```
+
+## Add multiple components at a time
+#### Remark: Used in the project root directory.
+```text
+vues add -a -c <component-path-array>
+// eg: vues add -c /home/index,/home/personal
+```
+
 ##
 [github](https://github.com/ChangedenCZD/optimize-vue-cli)
 [issues](https://github.com/ChangedenCZD/optimize-vue-cli/issues)

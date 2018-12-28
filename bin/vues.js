@@ -26,11 +26,13 @@ program
 .option('-p,--path <modulePath>', 'Only work in -m option. (eg: vues add -m Index -p /index)')
 .option('-c,--component <componentPath>', 'eg: vues add -c /home/index')
 // .option('-cp,--component-path <componentPath>', '')
+.option('-a,--append', '')
 .action(name => {
   require('../libs/add')(cwd, {
     module: name.module,
     component: name.component,
-    path: name.path
+    path: name.path,
+    appendMode: name.append
   });
 });
 
