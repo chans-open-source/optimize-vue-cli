@@ -1,6 +1,6 @@
 {
   "name": "optimize-vue-cli",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "基于 vue-cli 3.0 构建的快速开发框架的脚手架",
   "author": {
     "name": "changeden"
@@ -19,7 +19,7 @@
     "shelljs": "^0.8.3"
   },
   "devDependencies": {
-    "eslint": "^5.11.0"
+    "eslint": "^5.11.1"
   },
   "keywords": [
     "vue",
@@ -38,5 +38,11 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ChangedenCZD/optimize-vue-cli.git"
+  },
+  "scripts": {
+    "test": "npm run test:a",
+    "test:a": "node test/createProject.js",
+    "test:m": "node test/addModule.js",
+    "test:c": "node test/addComponent.js"
   }
 }
