@@ -87,7 +87,7 @@ vues add -a -m <module-path-array>
 * 请在项目的根目录中运行。
 ```
 vues add -a -c <component-path-array>
-// eg: vues add -c /home/index,/home/personal
+// eg: vues add -a -c /home/index,/home/personal
 ```
 
 ## About 关于

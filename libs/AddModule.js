@@ -3,6 +3,7 @@ const FileUtils = require('../utils/FileUtils');
 const TextUtils = require('../utils/TextUtils');
 const FileGenerator = require('./FileGenerator');
 
+// 添加模块（页面）
 function add (cwd, title, path, moduleDir, srcDir) {
   const fixPath = TextUtils.fixPath(path);
   const className = TextUtils.parseClassName(fixPath);

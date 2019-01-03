@@ -3,6 +3,7 @@ const FileUtils = require('../utils/FileUtils');
 const TextUtils = require('../utils/TextUtils');
 const FileGenerator = require('./FileGenerator');
 
+// 添加组件
 function add (cwx, component, componentDir, srcDir) {
   const fixPath = TextUtils.fixPath(component);
   const className = TextUtils.parseClassName(fixPath);

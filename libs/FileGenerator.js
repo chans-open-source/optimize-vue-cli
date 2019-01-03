@@ -3,11 +3,13 @@ const FileUtils = require('../utils/FileUtils');
 const SRC = '/src/';
 const ASSETS_SCSS_BASE = 'assets/scss/base';
 
+// 生成模块（页面）的配置信息
 const genConfigFile = (configFilePath, fixPath, moduleTitle) => {
   FileUtils.write(configFilePath, `// 模块（页面）的配置信息
 module.exports = {path: '/${fixPath}',title: '${moduleTitle}'};`);
 };
 
+// 生成模块（页面）/组件的脚本文件
 const genJsFile = (dir, className, isComponent = false) => {
   const key = isComponent ? 'Component' : 'Module';
   const baseClass = `Vue${key}`;
@@ -61,11 +63,13 @@ export default new ${key}();
 `);
 };
 
+// 生成模块（页面）的样式文件
 const genScssFile = (dir, className, srcDir) => {
   FileUtils.write(`${dir}module.scss`, `@import "${FileUtils.relativePath(dir, srcDir)}${ASSETS_SCSS_BASE}";
 .module-layout.${className} {}`);
 };
 
+// 生成模块（页面）的Vue文件
 const genModuleVueFile = (dir, className) => {
   const scssFile = './module.scss';
   FileUtils.write(`${dir}module.vue`, `<template>
@@ -78,6 +82,7 @@ const genModuleVueFile = (dir, className) => {
 `);
 };
 
+// 生成模块（页面）相关文件
 const genModuleFiles = (dir, className, fixPath, title, srcDir) => {
   const configFilePath = `${dir}module.config.js`;
   genConfigFile(configFilePath, fixPath, title);
@@ -86,11 +91,13 @@ const genModuleFiles = (dir, className, fixPath, title, srcDir) => {
   genJsFile(dir, className, false);
 };
 
+// 生成组件的入口文件
 const genIndexFile = (dir) => {
   FileUtils.write(`${dir}index.js`, `// 组件入口
 module.exports = require('./component.vue');`);
 };
 
+// 生成组件的Vue文件
 const genComponentVueFile = (dir, className) => {
   const scssFile = './component.scss';
   FileUtils.write(`${dir}component.vue`, `<template>
@@ -103,11 +110,13 @@ const genComponentVueFile = (dir, className) => {
 `);
 };
 
+// 生成组件的样式文件
 const genComponentScssFile = (dir, className, srcDir) => {
   FileUtils.write(`${dir}component.scss`, `@import "${FileUtils.relativePath(dir, srcDir)}${ASSETS_SCSS_BASE}";
 .component-layout.${className} {}`);
 };
 
+// 生成组件相关文件
 const genComponentFiles = (dir, className, srcDir) => {
   genIndexFile(dir);
   genComponentVueFile(dir, className);
