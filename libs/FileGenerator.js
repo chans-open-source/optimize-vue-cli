@@ -4,7 +4,8 @@ const SRC = '/src/';
 const ASSETS_SCSS_BASE = 'assets/scss/base';
 
 const genConfigFile = (configFilePath, fixPath, moduleTitle) => {
-  FileUtils.write(configFilePath, `module.exports = {path: '/${fixPath}',title: '${moduleTitle}'};`);
+  FileUtils.write(configFilePath, `// 模块（页面）的配置信息
+module.exports = {path: '/${fixPath}',title: '${moduleTitle}'};`);
 };
 
 const genJsFile = (dir, className, isComponent = false) => {
@@ -18,23 +19,42 @@ class ${key} extends ${baseClass} {
   constructor () {
     super();
     this.setModuleName('${key.toLowerCase()}-${className}');
+    ${isComponent?`
+    // Vue.props
     this.setProps([]);
+    `:''}
+    // Vue.components
     this.setComponent({});
+    // Vue.methods
     this.setMethod({
+      // Vuex.mapActions
       ...${key}.mapActions([]),
+      /**
+       * onCreate中调用了super方法，则会默认调用该方法
+       * */
       init () {}
     });
+    // Vue.computed
     this.setCompute({
+      // Vuex.mapGetters
       ...${key}.mapGetters({})
     });
+    // Vue.watch
     this.setWatch({});
   }
 
+  /**
+  * Vue.data = {
+  *   return {};
+  * }
+  */
   getData () {
     return {};
   }
 
+  // Vue.created
   onCreate () {
+    // 建议保留该方法，否则不会调用methods中的init方法
     super.onCreate();
   }
 }
@@ -50,7 +70,10 @@ const genScssFile = (dir, className, srcDir) => {
 
 const genModuleVueFile = (dir, className) => {
   const scssFile = './module.scss';
-  FileUtils.write(`${dir}module.vue`, `<template><section class="module-layout ${className}"></section></template>
+  FileUtils.write(`${dir}module.vue`, `<template>
+  <section class="module-layout ${className}">
+  </section>
+</template>
 
 <script>import m from './module.js';export default m;</script>
 <style lang="scss">@import "${scssFile}";</style>
@@ -66,12 +89,16 @@ const genModuleFiles = (dir, className, fixPath, title, srcDir) => {
 };
 
 const genIndexFile = (dir) => {
-  FileUtils.write(`${dir}index.js`, `module.exports = require('./component.vue');`);
+  FileUtils.write(`${dir}index.js`, `// 组件入口
+module.exports = require('./component.vue');`);
 };
 
 const genComponentVueFile = (dir, className) => {
   const scssFile = './component.scss';
-  FileUtils.write(`${dir}component.vue`, `<template><section class="component-layout ${className}"></section></template>
+  FileUtils.write(`${dir}component.vue`, `<template>
+  <section class="component-layout ${className}">
+  </section>
+</template>
 
 <script>import c from './component.js';export default c;</script>
 <style lang="scss" scoped="true">@import "${scssFile}";</style>
