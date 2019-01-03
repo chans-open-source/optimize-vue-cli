@@ -19,10 +19,8 @@ class ${key} extends ${baseClass} {
   constructor () {
     super();
     this.setModuleName('${key.toLowerCase()}-${className}');
-    ${isComponent?`
-    // Vue.props
-    this.setProps([]);
-    `:''}
+    ${isComponent?`// Vue.props
+    this.setProps([]);`:''}
     // Vue.components
     this.setComponent({});
     // Vue.methods
