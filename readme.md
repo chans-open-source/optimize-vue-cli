@@ -1,4 +1,6 @@
 # optimize-vue-cli 脚手架
+[![LICENSE](https://img.shields.io/badge/license-MIT%20(The%20996%20Prohibited%20License)-blue.svg)](https://github.com/996icu/996.ICU/blob/master/LICENSE)
+
 * This is a multi-page project tool based on @vue/cli 3.0. Can quickly create projects, modules (pages), components. Modules (pages) created using this tool are accessible without additional configuration.
 * The development tool will receive long-term maintenance and is expected to be updated to 3.0 by vue. Js.
 
