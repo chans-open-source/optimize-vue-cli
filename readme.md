@@ -1,5 +1,5 @@
 # optimize-vue-cli 脚手架
-[![LICENSE](https://img.shields.io/badge/license-MIT%20(The%20996%20Prohibited%20License)-blue.svg)](https://github.com/996icu/996.ICU/blob/master/LICENSE)
+[![LICENSE](https://img.shields.io/badge/license-MIT%20996-blue.svg)](https://github.com/Chans-Open-Source/optimize-vue-cli/blob/master/LICENSE)
 
 * This is a multi-page project tool based on @vue/cli 3.0. Can quickly create projects, modules (pages), components. Modules (pages) created using this tool are accessible without additional configuration.
 * The development tool will receive long-term maintenance and is expected to be updated to 3.0 by vue. Js.
@@ -10,17 +10,16 @@
 ![NPM version](https://img.shields.io/npm/v/optimize-vue-cli.svg)
 ![NPM download](https://img.shields.io/npm/dm/optimize-vue-cli.svg)
 ![NPM download](https://img.shields.io/npm/dw/optimize-vue-cli.svg)
-![npm](https://img.shields.io/npm/l/optimize-vue-cli.svg)
 
 
-![GitHub watchers](https://img.shields.io/github/watchers/ChangedenCZD/optimize-vue-cli.svg)
-![GitHub stars](https://img.shields.io/github/stars/ChangedenCZD/optimize-vue-cli.svg)
-![GitHub forks](https://img.shields.io/github/forks/ChangedenCZD/optimize-vue-cli.svg)
-![GitHub issues](https://img.shields.io/github/issues/ChangedenCZD/optimize-vue-cli.svg)
-![GitHub last commit (branch)](https://img.shields.io/github/last-commit/ChangedenCZD/optimize-vue-cli.svg)
+![GitHub watchers](https://img.shields.io/github/watchers/Chans-Open-Source/optimize-vue-cli.svg)
+![GitHub stars](https://img.shields.io/github/stars/Chans-Open-Source/optimize-vue-cli.svg)
+![GitHub forks](https://img.shields.io/github/forks/Chans-Open-Source/optimize-vue-cli.svg)
+![GitHub issues](https://img.shields.io/github/issues/Chans-Open-Source/optimize-vue-cli.svg)
+![GitHub last commit (branch)](https://img.shields.io/github/last-commit/Chans-Open-Source/optimize-vue-cli.svg)
 
 ## Template 模板源码
-[Source Code](https://github.com/ChangedenCZD/optimize-vue)
+[Source Code](https://github.com/Chans-Open-Source/optimize-vue)
 
 ## Install 安装脚手架
 * Run in command line.
@@ -93,6 +92,6 @@ vues add -a -c <component-path-array>
 ```
 
 ## About 关于
-* [github](https://github.com/ChangedenCZD/optimize-vue-cli)
-* [issues](https://github.com/ChangedenCZD/optimize-vue-cli/issues)
+* [github](https://github.com/Chans-Open-Source/optimize-vue-cli)
+* [issues](https://github.com/Chans-Open-Source/optimize-vue-cli/issues)
 * [e-mail: changeden520@gmail.com](mailto://changeden520@gmail.com)
